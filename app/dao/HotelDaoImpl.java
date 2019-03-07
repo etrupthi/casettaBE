@@ -57,34 +57,26 @@ public class HotelDaoImpl implements HotelDao {
 //    }
 
 
-    public Collection<Hotel> search(String location, Integer price){
+    public Collection<Hotel> search(String location, Integer price) {
 
         LOGGER.debug(location);
         LOGGER.debug(String.valueOf(price));
 
-
-        if((null==location)&&(null==price)){
+        if ((null == location) && (null == price)) {
 
             TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b", Hotel.class);
             List<Hotel> hotels = query.getResultList();
 
             return hotels;
-        }
-
-       else if(null == price){
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = '" + location + "'",Hotel.class);
+        } else if (null == price) {
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = '" + location + "'", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
-        }
-        else if(null == location){
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price = '"+price+"' ",Hotel.class);
+        } else if (null == location) {
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price = '" + price + "' ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
-        }
-
-
-
-        else {
+        } else {
             TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = '" + location + "' AND price = '" + price + "' ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;

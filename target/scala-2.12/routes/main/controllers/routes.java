@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/backend/conf/routes
-// @DATE:Wed Mar 06 11:15:49 IST 2019
+// @DATE:Thu Mar 07 12:31:36 IST 2019
 
 package controllers;
 
@@ -13,6 +13,7 @@ public class routes {
   public static final controllers.ReverseUsersController UsersController = new controllers.ReverseUsersController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseHomeController HomeController = new controllers.ReverseHomeController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseAsyncController AsyncController = new controllers.ReverseAsyncController(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReverseImagesController ImagesController = new controllers.ReverseImagesController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseHotelController HotelController = new controllers.ReverseHotelController(RoutesPrefix.byNamePrefix());
 
   public static class javascript {
@@ -22,6 +23,7 @@ public class routes {
     public static final controllers.javascript.ReverseUsersController UsersController = new controllers.javascript.ReverseUsersController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseHomeController HomeController = new controllers.javascript.ReverseHomeController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseAsyncController AsyncController = new controllers.javascript.ReverseAsyncController(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReverseImagesController ImagesController = new controllers.javascript.ReverseImagesController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseHotelController HotelController = new controllers.javascript.ReverseHotelController(RoutesPrefix.byNamePrefix());
   }
 

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/backend/conf/routes
-// @DATE:Wed Mar 06 11:15:49 IST 2019
+// @DATE:Thu Mar 07 12:31:36 IST 2019
 
 
 package router {

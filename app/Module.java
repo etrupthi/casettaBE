@@ -8,9 +8,7 @@ import dao.HotelDao;
 import dao.HotelDaoImpl;
 import dao.UserDao;
 import dao.UserDaoImpl;
-import services.ApplicationTimer;
-import services.AtomicCounter;
-import services.Counter;
+import services.*;
 
 /**
  * This class is a Guice module that tells Guice how to bind several
@@ -29,6 +27,7 @@ public class Module extends AbstractModule {
 
         bind(HotelDao.class).to(HotelDaoImpl.class);
         bind(UserDao.class).to(UserDaoImpl.class);
+        bind(ImageStore.class).to(ImageStoreImpl.class);
         // Use the system clock as the default implementation of Clock
         bind(Clock.class).toInstance(Clock.systemDefaultZone());
         // Ask Guice to create an instance of ApplicationTimer when the

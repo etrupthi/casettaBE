@@ -72,8 +72,6 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User update(User user) {
 
-
-
         if (null == user) {
             throw new IllegalArgumentException("User must be provided");
         }
@@ -88,6 +86,7 @@ public class UserDaoImpl implements UserDao {
         }
 
         existingUser.setUsername(user.getUsername());
+        existingUser.setAccessToken(user.getAccessToken());
 
         jpaApi.em().persist(existingUser);
 

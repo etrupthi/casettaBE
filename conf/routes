@@ -4,7 +4,9 @@
 
 +nocsrf
 POST /users               controllers.UsersController.registerUser()
++nocsrf
 GET  /users/me            controllers.UsersController.getCurrentUser()
++nocsrf
 PUT /users/signin         controllers.UsersController.signInUser()
 
 +nocsrf
@@ -18,6 +20,10 @@ GET /hotels                         controllers.HotelController.searchHotels(loc
 
 #GET  /hotels                        controllers.HotelController.getAllHotels()
 
++nocsrf
+POST /images             controllers.ImagesController.uploadImage()
+GET /images/:id          controllers.ImagesController.downloadImage(id: String)
+DELETE /images/:id       controllers.ImagesController.deleteImage(id: String)
 
 GET  /hotels/:id                    controllers.HotelController.getHotelById(id: Integer)
 PUT  /hotels/:id                    controllers.HotelController.updateHotelById(id: Integer)

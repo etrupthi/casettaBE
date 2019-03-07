@@ -179,6 +179,8 @@ public class UsersController extends Controller {
     @Authenticator
     public Result signOutUser() {
 
+        LOGGER.info("signOutUser");
+
         final User user = (User) ctx().args.get("user");
 
         user.setAccessToken(null);
