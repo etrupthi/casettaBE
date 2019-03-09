@@ -8,6 +8,7 @@ import java.util.Collection;
 public interface HotelDao extends CrudDao<Hotel, Integer> {
 
     Collection<Hotel> search(String location, Integer price);
+    Collection<Hotel> searchByUsername(String username);
 }
 
 

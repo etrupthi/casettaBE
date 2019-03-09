@@ -42,7 +42,28 @@ public class HotelController extends Controller {
 
         final JsonNode result = Json.toJson(newHotel);
         return ok(result);
+
+//        final JsonNode json = request().body().asJson();
+//        final Hotel hotel = Json.fromJson(json, Hotel.class);
+//        final Hotel newHotel = hotelDao.create(Hotel);
+//        final JsonNode result = Json.toJson(newHotel);
+//        return ok(result);
+
     }
+
+
+    @Transactional
+    public Result getHotelByUsername(){
+
+        final JsonNode json = request().body().asJson();
+        final Hotel hotel = Json.fromJson(json,Hotel.class);
+        final String username = json.get("username").asText();
+        Collection<Hotel> hotels = hotelDao.searchByUsername(username);
+        final JsonNode result = Json.toJson(hotels);
+        return ok(result);
+
+    }
+
 
     @Transactional
     public Result getHotelById(Integer id) {

@@ -1,6 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/backend/conf/logback.xml,/Users/etrupthi/Documents/backend/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/backend/conf/META-INF,/Users/etrupthi/Documents/backend/target/scala-2.12/classes/META-INF)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/backend/conf/META-INF/persistence.xml,/Users/etrupthi/Documents/backend/target/scala-2.12/classes/META-INF/persistence.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/backend/conf/application.conf,/Users/etrupthi/Documents/backend/target/scala-2.12/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/backend/conf/routes,/Users/etrupthi/Documents/backend/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/casettaBE/conf/logback.xml,/Users/etrupthi/Documents/casettaBE/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/casettaBE/conf/META-INF,/Users/etrupthi/Documents/casettaBE/target/scala-2.12/classes/META-INF)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/casettaBE/conf/META-INF/persistence.xml,/Users/etrupthi/Documents/casettaBE/target/scala-2.12/classes/META-INF/persistence.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/casettaBE/conf/application.conf,/Users/etrupthi/Documents/casettaBE/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/etrupthi/Documents/casettaBE/conf/routes,/Users/etrupthi/Documents/casettaBE/target/scala-2.12/classes/routes)[0m

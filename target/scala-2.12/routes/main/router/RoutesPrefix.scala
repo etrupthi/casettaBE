@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/etrupthi/Documents/backend/conf/routes
-// @DATE:Thu Mar 07 12:31:36 IST 2019
+// @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
+// @DATE:Sat Mar 09 12:03:13 IST 2019
 
 
 package router {

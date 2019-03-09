@@ -19,6 +19,7 @@ public class ImagesController extends Controller {
 
     @Inject
     public ImagesController(ImageStore imageStore) {
+
         this.imageStore = imageStore;
     }
 
@@ -41,7 +42,6 @@ public class ImagesController extends Controller {
         final Path source = image.getFile().toPath();
 
         String imageId = imageStore.save(source);
-        LOGGER.debug("image id {}", imageId);
 
         final String downloadUrl = routes.ImagesController.downloadImage(imageId).absoluteURL(request());
 
@@ -51,6 +51,7 @@ public class ImagesController extends Controller {
 
         return ok(result);
     }
+
 
     public Result downloadImage(String id) {
 

@@ -1,9 +1,9 @@
-2019-03-07 12:12:54,591 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-6 - Database [default] initialized at jdbc:mysql://localhost/library
-2019-03-07 12:12:54,599 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2019-03-07 12:12:54,621 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-6 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-07 12:12:54,957 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
-2019-03-07 12:12:55,261 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Starting application at 2019-03-07T06:42:55.260Z
-2019-03-07 12:12:56,883 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
+2019-03-09 11:52:28,038 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-7 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-09 11:52:28,058 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2019-03-09 11:52:28,085 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-7 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-09 11:52:28,853 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
+2019-03-09 11:52:29,100 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Starting application at 2019-03-09T06:22:29.099Z
+2019-03-09 11:52:31,694 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-7 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -133,7 +133,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hibernate_sequence' already 
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:12:56,948 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+2019-03-09 11:52:31,895 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-7 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -263,7 +263,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hotel' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:12:56,951 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
+2019-03-09 11:52:31,899 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-7 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -393,7 +393,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'user' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:12:56,960 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
+2019-03-09 11:52:31,981 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-7 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -523,7 +523,7 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:12:57,045 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-6 - Using the following cache configuration for assets:
+2019-03-09 11:52:32,221 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-7 - Using the following cache configuration for assets:
 	 enableCaching = false
 	 enableCacheControl = false
 	 defaultCacheControl = public, max-age=3600
@@ -531,26 +531,36 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	 configuredCacheControl:
 
 
-2019-03-07 12:12:57,092 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-09 11:52:32,261 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.cors.CORSFilter
 
-2019-03-07 12:12:57,260 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev)
-2019-03-07 12:12:57,543 [WARN] from play.filters.CSRF in play-dev-mode-akka.actor.default-dispatcher-2 - [CSRF] Check failed because no or invalid token found in body for /images
-2019-03-07 12:12:57,547 [WARN] from play.filters.CSRF in play-dev-mode-akka.actor.default-dispatcher-2 - [CSRF] Check failed with NoTokenInBody for /images
-2019-03-07 12:13:26,623 [WARN] from play.filters.CSRF in play-dev-mode-akka.actor.default-dispatcher-11 - [CSRF] Check failed because no or invalid token found in body for /images
-2019-03-07 12:13:26,624 [WARN] from play.filters.CSRF in play-dev-mode-akka.actor.default-dispatcher-11 - [CSRF] Check failed with NoTokenInBody for /images
-2019-03-07 12:15:30,980 [INFO] from application in application-akka.actor.default-dispatcher-8 - ApplicationTimer demo: Stopping application at 2019-03-07T06:45:30.980Z after 155s.
-2019-03-07 12:15:30,981 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2019-03-07 12:15:31,188 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-19 - Database [default] initialized at jdbc:mysql://localhost/library
-2019-03-07 12:15:31,189 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - Creating Pool for datasource 'default'
-2019-03-07 12:15:31,189 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-19 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-07 12:15:31,220 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-19 - datasource [default] bound to JNDI as DefaultDS
-2019-03-07 12:15:31,222 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - ApplicationTimer demo: Starting application at 2019-03-07T06:45:31.222Z
-2019-03-07 12:15:31,358 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-19 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
+2019-03-09 11:52:32,442 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
+2019-03-09 11:52:33,009 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-5 - Password hash 5beb0245f747201c10baa0148e4eda9c
+2019-03-09 11:52:46,483 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-4 - Password hash 5beb0245f747201c10baa0148e4eda9c
+2019-03-09 11:53:39,296 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer 2JRG8ZU5JFES2VPECR
+2019-03-09 11:53:39,296 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken 2JRG8ZU5JFES2VPECR
+2019-03-09 11:53:39,299 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - 2JRG8ZU5JFES2VPECR
+2019-03-09 11:54:00,854 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:54:00,854 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:56:12,834 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:56:12,834 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:56:34,854 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer 2JRG8ZU5JFES2VPECR
+2019-03-09 11:56:34,854 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken 2JRG8ZU5JFES2VPECR
+2019-03-09 11:56:34,856 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - 2JRG8ZU5JFES2VPECR
+2019-03-09 11:56:52,222 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:56:52,222 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-09 11:58:18,874 [INFO] from application in application-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Stopping application at 2019-03-09T06:28:18.874Z after 349s.
+2019-03-09 11:58:18,875 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2019-03-09 11:58:19,190 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-6 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-09 11:58:19,190 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2019-03-09 11:58:19,191 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-6 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-09 11:58:19,374 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
+2019-03-09 11:58:19,376 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Starting application at 2019-03-09T06:28:19.376Z
+2019-03-09 11:58:19,522 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -680,7 +690,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hibernate_sequence' already 
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:15:31,401 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-19 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+2019-03-09 11:58:19,630 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -810,7 +820,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hotel' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:15:31,403 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-19 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
+2019-03-09 11:58:19,632 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -940,7 +950,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'user' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:15:31,406 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-19 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
+2019-03-09 11:58:19,634 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-6 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -1070,7 +1080,7 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:15:31,460 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-19 - Using the following cache configuration for assets:
+2019-03-09 11:58:19,694 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-6 - Using the following cache configuration for assets:
 	 enableCaching = false
 	 enableCacheControl = false
 	 defaultCacheControl = public, max-age=3600
@@ -1078,44 +1088,22 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	 configuredCacheControl:
 
 
-2019-03-07 12:15:31,464 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-19 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-09 11:58:19,699 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.cors.CORSFilter
 
-2019-03-07 12:15:31,471 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-19 - Application started (Dev)
-2019-03-07 12:15:31,621 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-3 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp5297213896397303926/multipartBody7092679943314815211asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/eb01e1d9-349f-4c0f-b432-fb0b1a518a37.png
-2019-03-07 12:15:31,624 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-3 - image id eb01e1d9-349f-4c0f-b432-fb0b1a518a37
-2019-03-07 12:15:58,733 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-4 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp5297213896397303926/multipartBody6523034327992340999asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/2ca84d6f-e57c-4bd6-9a33-891589713663.png
-2019-03-07 12:15:58,733 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-4 - image id 2ca84d6f-e57c-4bd6-9a33-891589713663
-2019-03-07 12:18:49,284 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-17 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp5297213896397303926/multipartBody2429986424794176605asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/f970ad5e-38b8-475d-bf5f-d034a4c2eea0.png
-2019-03-07 12:18:49,305 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-17 - image id f970ad5e-38b8-475d-bf5f-d034a4c2eea0
-2019-03-07 12:19:38,441 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-2 - Auth token = Bearer QA9C8HWAR2IJA7EFTB
-2019-03-07 12:19:38,442 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-2 - accessToken QA9C8HWAR2IJA7EFTB
-2019-03-07 12:19:38,445 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - QA9C8HWAR2IJA7EFTB
-2019-03-07 12:20:40,075 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:21:11,493 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - Password hash 91201ede108ec239ee0d20109710aef1
-2019-03-07 12:21:35,967 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:22:19,704 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:23:47,104 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:24:04,300 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:24:42,903 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - Password hash d276f9674496047e476152b7c739694a
-2019-03-07 12:25:04,555 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:25:10,993 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:25:22,815 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:26:28,392 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:29:20,474 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:29:32,701 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-2 - [CSRF] Check failed because application/json for request /users/signin
-2019-03-07 12:31:41,008 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2019-03-07T07:01:41.008Z after 970s.
-2019-03-07 12:31:41,008 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2019-03-07 12:31:41,226 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-45 - Database [default] initialized at jdbc:mysql://localhost/library
-2019-03-07 12:31:41,226 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-45 - Creating Pool for datasource 'default'
-2019-03-07 12:31:41,226 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-45 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-07 12:31:41,278 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-45 - datasource [default] bound to JNDI as DefaultDS
-2019-03-07 12:31:41,279 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-45 - ApplicationTimer demo: Starting application at 2019-03-07T07:01:41.279Z
-2019-03-07 12:31:41,415 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-45 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
+2019-03-09 11:58:19,705 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev)
+2019-03-09 12:03:16,301 [INFO] from application in application-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Stopping application at 2019-03-09T06:33:16.301Z after 297s.
+2019-03-09 12:03:16,302 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2019-03-09 12:03:16,469 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-9 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-09 12:03:16,469 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
+2019-03-09 12:03:16,470 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-9 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-09 12:03:16,487 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-9 - datasource [default] bound to JNDI as DefaultDS
+2019-03-09 12:03:16,488 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-9 - ApplicationTimer demo: Starting application at 2019-03-09T06:33:16.488Z
+2019-03-09 12:03:16,615 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-9 - GenerationTarget encountered exception accepting command : Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table hibernate_sequence (next_val bigint) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -1245,7 +1233,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hibernate_sequence' already 
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:31:41,487 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-45 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+2019-03-09 12:03:16,645 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-9 - GenerationTarget encountered exception accepting command : Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Hotel (id integer not null, description varchar(255), location varchar(255), name varchar(255), price integer, rating varchar(255), url varchar(255), username varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -1375,7 +1363,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'hotel' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:31:41,489 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-45 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
+2019-03-09 12:03:16,646 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-9 - GenerationTarget encountered exception accepting command : Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table User (username varchar(255) not null, accessToken varchar(255), email varchar(255), hashIterations integer, passwordHash varchar(255), role integer, salt varchar(255), state integer, primary key (username)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -1505,7 +1493,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'user' already exists
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:31:41,492 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-45 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
+2019-03-09 12:03:16,648 [WARN] from org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl in play-dev-mode-akka.actor.default-dispatcher-9 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Hotel add constraint FKe6bjb2tycr7kchmcr8kpvkbwp foreign key (username) references User (username)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:440)
@@ -1635,7 +1623,7 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 117 common frames omitted
-2019-03-07 12:31:41,542 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-45 - Using the following cache configuration for assets:
+2019-03-09 12:03:16,699 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-9 - Using the following cache configuration for assets:
 	 enableCaching = false
 	 enableCacheControl = false
 	 defaultCacheControl = public, max-age=3600
@@ -1643,149 +1631,12 @@ Caused by: java.sql.SQLException: Duplicate foreign key constraint name 'FKe6bjb
 	 configuredCacheControl:
 
 
-2019-03-07 12:31:41,547 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-45 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-09 12:03:16,703 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.cors.CORSFilter
 
-2019-03-07 12:31:41,552 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-45 - Application started (Dev)
-2019-03-07 12:31:41,580 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-5 - Password hash 1225efd5e044444a0108a4c82727a329
-2019-03-07 12:32:05,610 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-2 - Auth token = Bearer D2U3KSR34IE37CSW35
-2019-03-07 12:32:05,610 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-2 - accessToken D2U3KSR34IE37CSW35
-2019-03-07 12:32:05,615 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - D2U3KSR34IE37CSW35
-2019-03-07 12:32:40,413 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-4 - Auth token = Bearer C3BKJ3OMHLLZS3N69U
-2019-03-07 12:32:40,413 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-4 - accessToken C3BKJ3OMHLLZS3N69U
-2019-03-07 12:32:40,414 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-4 - C3BKJ3OMHLLZS3N69U
-2019-03-07 12:34:02,774 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-4 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody4516130456428752167asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/b0e2733b-6d98-4b05-b1c6-ff6236749e57.png
-2019-03-07 12:34:02,801 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-4 - image id b0e2733b-6d98-4b05-b1c6-ff6236749e57
-2019-03-07 12:34:36,130 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - Auth token = Bearer D2U3KSR34IE37CSW35
-2019-03-07 12:34:36,130 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - accessToken D2U3KSR34IE37CSW35
-2019-03-07 12:34:36,131 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - D2U3KSR34IE37CSW35
-2019-03-07 12:36:13,161 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - Password hash 1225efd5e044444a0108a4c82727a329
-2019-03-07 12:36:42,469 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - Auth token = Bearer TOLV6Q6P26WKRS5Y42
-2019-03-07 12:36:42,469 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - accessToken TOLV6Q6P26WKRS5Y42
-2019-03-07 12:36:42,470 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - TOLV6Q6P26WKRS5Y42
-2019-03-07 12:37:16,898 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - Auth token = Bearer QA9C8HWAR2IJA7EFTB
-2019-03-07 12:37:16,898 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - accessToken QA9C8HWAR2IJA7EFTB
-2019-03-07 12:37:16,901 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - QA9C8HWAR2IJA7EFTB
-2019-03-07 12:37:46,532 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - Auth token = Bearer 1FGLAXRT1S354EI1TY
-2019-03-07 12:37:46,532 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - accessToken 1FGLAXRT1S354EI1TY
-2019-03-07 12:37:46,535 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - 1FGLAXRT1S354EI1TY
-2019-03-07 12:38:48,183 [ERROR] from application in application-akka.actor.default-dispatcher-7 - 
-
-! @7b5ljmahl - Internal server error, for (PUT) [/users/signin] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.NullPointerException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:251)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:178)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:382)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:380)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:413)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.RuntimeException: java.lang.NullPointerException
-	at play.libs.Json.fromJson(Json.java:90)
-	at controllers.UsersController.signInUser(UsersController.java:122)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$6(Routes.scala:391)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.db.jpa.TransactionalAction.lambda$call$0(TransactionalAction.java:28)
-	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$2(DefaultJPAApi.java:207)
-	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:142)
-	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:206)
-	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
-	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:654)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:288)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:288)
-	at scala.concurrent.Future.map$(Future.scala:288)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:654)
-	at play.core.j.JavaAction.apply(JavaAction.scala:138)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:303)
-	... 13 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at com.fasterxml.jackson.databind.ObjectMapper.treeToValue(ObjectMapper.java:2599)
-	at play.libs.Json.fromJson(Json.java:88)
-	... 50 common frames omitted
-2019-03-07 12:39:27,130 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - Password hash 1225efd5e044444a0108a4c82727a329
-2019-03-07 12:39:58,233 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - Auth token = Bearer I5VGXDSPDOKYKA9F9E
-2019-03-07 12:39:58,233 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-7 - accessToken I5VGXDSPDOKYKA9F9E
-2019-03-07 12:39:58,235 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-7 - I5VGXDSPDOKYKA9F9E
-2019-03-07 12:42:09,818 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-7 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody749657284380572376asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/04d94ca7-41b6-4ecf-b8ed-760bc2b55dec.png
-2019-03-07 12:42:09,819 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-7 - image id 04d94ca7-41b6-4ecf-b8ed-760bc2b55dec
-2019-03-07 12:42:49,996 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - Auth token = Bearer QA9C8HWAR2IJA7EFTB
-2019-03-07 12:42:49,996 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - accessToken QA9C8HWAR2IJA7EFTB
-2019-03-07 12:42:49,998 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-15 - QA9C8HWAR2IJA7EFTB
-2019-03-07 12:43:18,397 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-15 - Password hash 1225efd5e044444a0108a4c82727a329
-2019-03-07 12:43:31,624 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-15 - Password hash 1225efd5e044444a0108a4c82727a329
-2019-03-07 12:44:00,707 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 12:44:00,707 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 12:44:00,708 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-15 - WGX8OVJHSP9L4H3DV2
-2019-03-07 12:47:34,458 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 12:47:34,458 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-15 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 12:47:34,460 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-15 - WGX8OVJHSP9L4H3DV2
-2019-03-07 13:17:26,974 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-3 housekeeper - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=27m15s498ms).
-2019-03-07 13:47:21,872 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-23 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody7616777863080406313asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/e6b47ebc-febd-49d7-b798-49b790ff04a1.png
-2019-03-07 13:47:21,872 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-23 - image id e6b47ebc-febd-49d7-b798-49b790ff04a1
-2019-03-07 13:48:20,751 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-22 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 13:48:20,751 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-22 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 13:48:20,753 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-22 - WGX8OVJHSP9L4H3DV2
-2019-03-07 13:48:59,325 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-22 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody5531459164735674234asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/21a14b74-9980-45a7-bc05-7cad59c79baa.png
-2019-03-07 13:48:59,326 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-22 - image id 21a14b74-9980-45a7-bc05-7cad59c79baa
-2019-03-07 13:49:32,715 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 13:49:32,715 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 13:49:32,715 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-28 - WGX8OVJHSP9L4H3DV2
-2019-03-07 13:54:34,434 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - Auth token = Bearer TOLV6Q6P26WKRS5Y42
-2019-03-07 13:54:34,434 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - accessToken TOLV6Q6P26WKRS5Y42
-2019-03-07 13:54:34,434 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-28 - TOLV6Q6P26WKRS5Y42
-2019-03-07 13:54:58,598 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - Auth token = Bearer VOLI8BZQWMVFR1JND5
-2019-03-07 13:54:58,598 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-28 - accessToken VOLI8BZQWMVFR1JND5
-2019-03-07 13:54:58,601 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-28 - VOLI8BZQWMVFR1JND5
-2019-03-07 13:54:58,616 [INFO] from controllers.UsersController in application-akka.actor.default-dispatcher-28 - signOutUser
-2019-03-07 13:57:08,996 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-28 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody704694055058200419asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/8e8a1005-1dc1-4765-9db3-a38cadead74f.png
-2019-03-07 13:57:08,996 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-28 - image id 8e8a1005-1dc1-4765-9db3-a38cadead74f
-2019-03-07 13:57:50,393 [WARN] from play.filters.CSRF in application-akka.actor.default-dispatcher-36 - [CSRF] Check failed because application/json for request /hotels
-2019-03-07 13:57:57,793 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 13:57:57,793 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 13:57:57,795 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-36 - WGX8OVJHSP9L4H3DV2
-2019-03-07 13:58:33,803 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-41 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4990926948911663253/multipartBody1900471680304850196asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/6cdad694-f5f3-42c8-9685-53e94f1ccebc.png
-2019-03-07 13:58:33,804 [DEBUG] from controllers.ImagesController in application-akka.actor.default-dispatcher-41 - image id 6cdad694-f5f3-42c8-9685-53e94f1ccebc
-2019-03-07 13:59:43,016 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 13:59:43,016 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 13:59:43,032 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-36 - WGX8OVJHSP9L4H3DV2
-2019-03-07 14:06:15,924 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - Auth token = Bearer WGX8OVJHSP9L4H3DV2
-2019-03-07 14:06:15,924 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-36 - accessToken WGX8OVJHSP9L4H3DV2
-2019-03-07 14:06:15,925 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-36 - WGX8OVJHSP9L4H3DV2
+2019-03-09 12:03:16,709 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev)
+2019-03-09 12:03:16,742 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - akki

@@ -8,15 +8,14 @@ POST /users               controllers.UsersController.registerUser()
 GET  /users/me            controllers.UsersController.getCurrentUser()
 +nocsrf
 PUT /users/signin         controllers.UsersController.signInUser()
-
 +nocsrf
 PUT /users/signout        controllers.UsersController.signOutUser()
 
 
 +nocsrf
-POST /hotels                        controllers.HotelController.createHotel()
-
-GET /hotels                         controllers.HotelController.searchHotels(location: String ?= null, price: Integer ?= null)
+POST /hotels                 controllers.HotelController.createHotel()
+GET /hotels                  controllers.HotelController.searchHotels(location: String ?= null, price: Integer ?= null)
+GET /hotels/username         controllers.HotelController.getHotelByUsername()
 
 #GET  /hotels                        controllers.HotelController.getAllHotels()
 
@@ -28,7 +27,6 @@ DELETE /images/:id       controllers.ImagesController.deleteImage(id: String)
 GET  /hotels/:id                    controllers.HotelController.getHotelById(id: Integer)
 PUT  /hotels/:id                    controllers.HotelController.updateHotelById(id: Integer)
 DELETE /hotels/:id                  controllers.HotelController.deleteHotelById(id: Integer)
-
 
 
 

@@ -44,17 +44,17 @@ public class HotelDaoImpl implements HotelDao {
     }
 
 
-//    public Collection<Hotel> location(String location){
-//
-//        if(null == location) {
-//            throw new IllegalArgumentException("Location must be provided");
-//        }
-//
-//        LOGGER.debug(location);
-//        TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = location", Hotel.class);
-//        List<Hotel> hotels = query.getResultList();
-//        return hotels;
-//    }
+    public Collection<Hotel> searchByUsername(String username){
+
+        if(null == username) {
+            throw new IllegalArgumentException("username must be provided");
+        }
+
+        LOGGER.debug(username);
+        TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where username = '" + username + "'", Hotel.class);
+        List<Hotel> hotels = query.getResultList();
+        return hotels;
+    }
 
 
     public Collection<Hotel> search(String location, Integer price) {
