@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Tue Mar 12 13:07:37 IST 2019
+// @DATE:Tue Mar 12 14:34:56 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -189,16 +189,6 @@ package controllers.javascript {
     }
 
   
-    // @LINE:18
-    def searchHotels: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HotelController.searchHotels",
-      """
-        function(location0,minP1,maxP2) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hotels" + _qS([(location0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("location", location0)), (minP1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("minP", minP1)), (maxP2 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("maxP", maxP2))])})
-        }
-      """
-    )
-  
     // @LINE:20
     def getHotelByUsername: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HotelController.getHotelByUsername",
@@ -235,6 +225,16 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hotels/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def searchHotels: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HotelController.searchHotels",
+      """
+        function(location0,maxP1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hotels" + _qS([(location0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("location", location0)), (maxP1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("maxP", maxP1))])})
         }
       """
     )

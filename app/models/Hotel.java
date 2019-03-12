@@ -40,11 +40,16 @@ public class Hotel {
     @JsonProperty("amenities")
     private String amenities;
 
+    @Basic
+    @JsonProperty("imageUrls")
+    private String[] imageUrls;
+
     @ManyToOne
     @JoinColumn(name = "username")
     private User user;
 
-    public Hotel(Integer id, String name, String location, Integer price,String rating,String description, String url, String amenities)
+
+    public Hotel(Integer id, String name, String location, Integer price,String rating,String description, String url, String amenities, String[] imageUrls)
     {
         this.id=id;
         this.name = name;
@@ -54,6 +59,7 @@ public class Hotel {
         this.description=description;
         this.url=url;
         this.amenities=amenities;
+        this.imageUrls = imageUrls;
     }
 
     public Hotel() {
@@ -129,6 +135,14 @@ public class Hotel {
 
     public void setAmenities(String amenities) {
         this.amenities = amenities;
+    }
+
+    public String[] getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(String[] imageUrls) {
+        this.imageUrls = imageUrls;
     }
 }
 

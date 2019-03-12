@@ -134,9 +134,9 @@ public class HotelController extends Controller {
 
 
     @Transactional
-    public Result searchHotels(String location, Integer minP, Integer maxP){
+    public Result searchHotels(String location, Integer maxP){
 
-        Collection<Hotel> hotels = hotelDao.search(location, minP, maxP);
+        Collection<Hotel> hotels = hotelDao.search(location, maxP);
         final JsonNode result = Json.toJson(hotels);
         return ok(result);
     }

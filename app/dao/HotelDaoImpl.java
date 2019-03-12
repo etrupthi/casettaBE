@@ -71,28 +71,30 @@ public class HotelDaoImpl implements HotelDao {
     }
 
 
-    public Collection<Hotel> search(String location, Integer minP, Integer maxP) {
+    public Collection<Hotel> search(String location, Integer maxP) {
 
         LOGGER.debug(location);
-        LOGGER.debug(String.valueOf(minP));
+
         LOGGER.debug(String.valueOf(maxP));
 
-        if ((null == location) && (null == minP)) {
+        //final Integer minP=0;
+
+        if ((null == location) && (null == maxP)) {
 
             TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b", Hotel.class);
             List<Hotel> hotels = query.getResultList();
 
             return hotels;
-        } else if (null == minP) {
+        } else if (null == maxP) {
             TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "' OR name = '" +location+ "')", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         } else if (null == location) {
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price BETWEEN '"+minP+"' AND '"+maxP+"'  ", Hotel.class);
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price BETWEEN 0 AND '"+maxP+"'  ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         } else {
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "' OR name = '" +location+ "') AND (price BETWEEN '"+minP+"' AND '"+maxP+"') ", Hotel.class);
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "' OR name = '" +location+ "') AND (price BETWEEN 0 AND '"+maxP+"') ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         }

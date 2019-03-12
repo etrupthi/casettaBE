@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Tue Mar 12 13:07:37 IST 2019
+// @DATE:Tue Mar 12 14:34:56 IST 2019
 
 import play.api.mvc.Call
 
@@ -138,12 +138,6 @@ package controllers {
     }
 
   
-    // @LINE:18
-    def searchHotels(location:String = null, minP:Integer = null, maxP:Integer = null): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "hotels" + play.core.routing.queryString(List(if(location == null) None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("location", location)), if(minP == null) None else Some(implicitly[play.api.mvc.QueryStringBindable[Integer]].unbind("minP", minP)), if(maxP == null) None else Some(implicitly[play.api.mvc.QueryStringBindable[Integer]].unbind("maxP", maxP)))))
-    }
-  
     // @LINE:20
     def getHotelByUsername(): Call = {
       
@@ -166,6 +160,12 @@ package controllers {
     def getHotelById(id:Integer): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "hotels/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
+    }
+  
+    // @LINE:18
+    def searchHotels(location:String = null, maxP:Integer = null): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "hotels" + play.core.routing.queryString(List(if(location == null) None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("location", location)), if(maxP == null) None else Some(implicitly[play.api.mvc.QueryStringBindable[Integer]].unbind("maxP", maxP)))))
     }
   
     // @LINE:33

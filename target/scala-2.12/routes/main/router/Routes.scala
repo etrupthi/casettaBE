@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Tue Mar 12 13:07:37 IST 2019
+// @DATE:Tue Mar 12 14:34:56 IST 2019
 
 package router
 
@@ -64,7 +64,7 @@ class Routes(
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/signin""", """controllers.UsersController.signInUser()"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/signout""", """controllers.UsersController.signOutUser()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.createHotel()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.searchHotels(location:String ?= null, minP:Integer ?= null, maxP:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.searchHotels(location:String ?= null, maxP:Integer ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels/username""", """controllers.HotelController.getHotelByUsername()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images""", """controllers.ImagesController.uploadImage()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """id<[^/]+>""", """controllers.ImagesController.downloadImage(id:String)"""),
@@ -178,12 +178,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels")))
   )
   private[this] lazy val controllers_HotelController_searchHotels5_invoker = createInvoker(
-    HotelController_0.searchHotels(fakeValue[String], fakeValue[Integer], fakeValue[Integer]),
+    HotelController_0.searchHotels(fakeValue[String], fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HotelController",
       "searchHotels",
-      Seq(classOf[String], classOf[Integer], classOf[Integer]),
+      Seq(classOf[String], classOf[Integer]),
       "GET",
       this.prefix + """hotels""",
       """""",
@@ -424,8 +424,8 @@ class Routes(
   
     // @LINE:18
     case controllers_HotelController_searchHotels5_route(params@_) =>
-      call(params.fromQuery[String]("location", Some(null)), params.fromQuery[Integer]("minP", Some(null)), params.fromQuery[Integer]("maxP", Some(null))) { (location, minP, maxP) =>
-        controllers_HotelController_searchHotels5_invoker.call(HotelController_0.searchHotels(location, minP, maxP))
+      call(params.fromQuery[String]("location", Some(null)), params.fromQuery[Integer]("maxP", Some(null))) { (location, maxP) =>
+        controllers_HotelController_searchHotels5_invoker.call(HotelController_0.searchHotels(location, maxP))
       }
   
     // @LINE:20

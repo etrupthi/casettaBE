@@ -1,9 +1,9 @@
-2019-03-12 13:09:04,819 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-10 - Database [default] initialized at jdbc:mysql://localhost/library
-2019-03-12 13:09:04,831 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2019-03-12 13:09:04,853 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-10 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-12 13:09:05,320 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-10 - datasource [default] bound to JNDI as DefaultDS
-2019-03-12 13:09:05,551 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-10 - ApplicationTimer demo: Starting application at 2019-03-12T07:39:05.551Z
-2019-03-12 13:09:07,882 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-10 - Using the following cache configuration for assets:
+2019-03-12 14:50:35,772 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-7 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-12 14:50:35,781 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2019-03-12 14:50:35,801 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-7 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-12 14:50:36,181 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
+2019-03-12 14:50:36,442 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Starting application at 2019-03-12T09:20:36.441Z
+2019-03-12 14:50:38,738 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-7 - Using the following cache configuration for assets:
 	 enableCaching = false
 	 enableCacheControl = false
 	 defaultCacheControl = public, max-age=3600
@@ -11,37 +11,20 @@
 	 configuredCacheControl:
 
 
-2019-03-12 13:09:07,928 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-12 14:50:38,784 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.cors.CORSFilter
 
-2019-03-12 13:09:08,068 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev)
-2019-03-12 13:09:08,634 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - Password hash 3f3355d6cb4365dfc0ee5982e218d179
-2019-03-12 13:09:22,809 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-4 - Password hash 3f3355d6cb4365dfc0ee5982e218d179
-2019-03-12 13:09:39,694 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer DBT551J1G0DK001MY1
-2019-03-12 13:09:39,694 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken DBT551J1G0DK001MY1
-2019-03-12 13:09:39,803 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - DBT551J1G0DK001MY1
-2019-03-12 13:10:23,257 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer DBT551J1G0DK001MY1
-2019-03-12 13:10:23,257 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken DBT551J1G0DK001MY1
-2019-03-12 13:10:23,258 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - DBT551J1G0DK001MY1
-2019-03-12 13:12:22,445 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer DBT551J1G0DK001MY1
-2019-03-12 13:12:22,445 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken DBT551J1G0DK001MY1
-2019-03-12 13:12:22,447 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - DBT551J1G0DK001MY1
-2019-03-12 13:12:47,691 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer DBT551J1G0DK001MY1
-2019-03-12 13:12:47,691 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken DBT551J1G0DK001MY1
-2019-03-12 13:12:47,694 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - DBT551J1G0DK001MY1
-2019-03-12 13:12:59,444 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - Auth token = Bearer DBT551J1G0DK001MY1
-2019-03-12 13:12:59,444 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-3 - accessToken DBT551J1G0DK001MY1
-2019-03-12 13:12:59,447 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-3 - DBT551J1G0DK001MY1
-2019-03-12 13:13:04,700 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:04,700 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:04,700 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:21,998 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - kol
-2019-03-12 13:13:21,998 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:21,998 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:31,999 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - deccan
-2019-03-12 13:13:31,999 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
-2019-03-12 13:13:31,999 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - null
+2019-03-12 14:50:38,929 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
+2019-03-12 14:50:47,582 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-5 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4381264891359049806/multipartBody6639048585039087720asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/9ea802da-d9c4-4b26-9757-3517810159b9.png
+2019-03-12 14:53:39,897 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-41 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4381264891359049806/multipartBody6762978902676391032asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/3a9f1d16-d87f-4206-b4a1-9ec364472430.png
+2019-03-12 14:54:19,107 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - Password hash bbfd6f7cbbda3a13aaeb3fdeda3650d7
+2019-03-12 14:54:24,252 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - Password hash bbfd6f7cbbda3a13aaeb3fdeda3650d7
+2019-03-12 14:56:31,914 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-23 - Auth token = Bearer CV9H1SZZYXSAQQ40B5
+2019-03-12 14:56:31,914 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-23 - accessToken CV9H1SZZYXSAQQ40B5
+2019-03-12 14:56:31,934 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - CV9H1SZZYXSAQQ40B5
+2019-03-12 14:57:12,625 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-23 - null
+2019-03-12 14:57:12,625 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-23 - null
