@@ -44,6 +44,20 @@ public class HotelDaoImpl implements HotelDao {
     }
 
 
+//    public Optional<Hotel> findHotel(String name, String location){
+//
+//
+//        if((null==name)||(null==location)){
+//            throw new IllegalArgumentException("Name or Location must be provided");
+//        }
+//
+//        TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where name = '" + name + "' AND location = '" + location + "'",Hotel.class);
+//        query.setMaxResults(1);
+//        final Hotel hotel = query.getResultList();
+//        return hotel != null ? Optional.of(hotel) : Optional.empty();
+//    }
+
+
     public Collection<Hotel> searchByUsername(String username){
 
         if(null == username) {
@@ -57,31 +71,45 @@ public class HotelDaoImpl implements HotelDao {
     }
 
 
-    public Collection<Hotel> search(String location, Integer price) {
+    public Collection<Hotel> search(String location, Integer minP, Integer maxP) {
 
         LOGGER.debug(location);
-        LOGGER.debug(String.valueOf(price));
+        LOGGER.debug(String.valueOf(minP));
+        LOGGER.debug(String.valueOf(maxP));
 
-        if ((null == location) && (null == price)) {
+        if ((null == location) && (null == minP)) {
 
             TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b", Hotel.class);
             List<Hotel> hotels = query.getResultList();
 
             return hotels;
-        } else if (null == price) {
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = '" + location + "'", Hotel.class);
+        } else if (null == minP) {
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "' OR name = '" +location+ "')", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         } else if (null == location) {
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price = '" + price + "' ", Hotel.class);
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where price BETWEEN '"+minP+"' AND '"+maxP+"'  ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         } else {
-            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where location = '" + location + "' AND price = '" + price + "' ", Hotel.class);
+            TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "' OR name = '" +location+ "') AND (price BETWEEN '"+minP+"' AND '"+maxP+"') ", Hotel.class);
             List<Hotel> hotels = query.getResultList();
             return hotels;
         }
     }
+
+
+//    public Collection<Hotel> Trial(String location, Integer minP, Integer maxP){
+//
+//        LOGGER.debug(location);
+//        LOGGER.debug(String.valueOf(minP));
+//        LOGGER.debug(String.valueOf(maxP));
+//
+//        TypedQuery<Hotel> query = jpaApi.em().createQuery("SELECT b FROM Hotel b where (location = '" + location + "') AND (price BETWEEN '"+minP+"' AND '"+maxP+"') ", Hotel.class);
+//        List<Hotel> hotels = query.getResultList();
+//        return hotels;
+//
+//    }
 
 
     public Hotel update(Hotel hotel) {

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Sat Mar 09 12:03:13 IST 2019
+// @DATE:Tue Mar 12 13:07:37 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:42
+  // @LINE:46
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:42
+    // @LINE:46
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -31,7 +31,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:37
+  // @LINE:41
   class ReverseCountController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +39,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:37
+    // @LINE:41
     def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CountController.count",
       """
@@ -101,7 +101,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:35
+  // @LINE:39
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -109,7 +109,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:35
+    // @LINE:39
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
@@ -121,7 +121,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:39
+  // @LINE:43
   class ReverseAsyncController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -129,7 +129,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:39
+    // @LINE:43
     def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AsyncController.message",
       """
@@ -141,7 +141,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:23
+  // @LINE:27
   class ReverseImagesController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -149,7 +149,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:28
     def downloadImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ImagesController.downloadImage",
       """
@@ -159,7 +159,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:29
     def deleteImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ImagesController.deleteImage",
       """
@@ -169,7 +169,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:27
     def uploadImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.ImagesController.uploadImage",
       """
@@ -190,6 +190,16 @@ package controllers.javascript {
 
   
     // @LINE:18
+    def searchHotels: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HotelController.searchHotels",
+      """
+        function(location0,minP1,maxP2) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hotels" + _qS([(location0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("location", location0)), (minP1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("minP", minP1)), (maxP2 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("maxP", maxP2))])})
+        }
+      """
+    )
+  
+    // @LINE:20
     def getHotelByUsername: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HotelController.getHotelByUsername",
       """
@@ -199,7 +209,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:32
     def updateHotelById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HotelController.updateHotelById",
       """
@@ -219,7 +229,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:31
     def getHotelById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HotelController.getHotelById",
       """
@@ -229,17 +239,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
-    def searchHotels: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HotelController.searchHotels",
-      """
-        function(location0,price1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hotels" + _qS([(location0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("location", location0)), (price1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Integer]].javascriptUnbind + """)("price", price1))])})
-        }
-      """
-    )
-  
-    // @LINE:29
+    // @LINE:33
     def deleteHotelById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HotelController.deleteHotelById",
       """

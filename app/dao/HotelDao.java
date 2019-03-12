@@ -3,12 +3,15 @@ package dao;
 import models.Hotel;
 
 import java.util.Collection;
+import java.util.Optional;
 
 
 public interface HotelDao extends CrudDao<Hotel, Integer> {
 
-    Collection<Hotel> search(String location, Integer price);
+    Collection<Hotel> search(String location, Integer minP, Integer maxP);
     Collection<Hotel> searchByUsername(String username);
+//    Optional<Hotel> findHotel(String name, String location);
+
 }
 
 

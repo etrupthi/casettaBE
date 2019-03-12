@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Sat Mar 09 12:03:13 IST 2019
+// @DATE:Tue Mar 12 13:07:37 IST 2019
 
 package router
 
@@ -18,15 +18,15 @@ class Routes(
   UsersController_2: controllers.UsersController,
   // @LINE:16
   HotelController_0: controllers.HotelController,
-  // @LINE:23
+  // @LINE:27
   ImagesController_6: controllers.ImagesController,
-  // @LINE:35
-  HomeController_3: controllers.HomeController,
-  // @LINE:37
-  CountController_1: controllers.CountController,
   // @LINE:39
+  HomeController_3: controllers.HomeController,
+  // @LINE:41
+  CountController_1: controllers.CountController,
+  // @LINE:43
   AsyncController_4: controllers.AsyncController,
-  // @LINE:42
+  // @LINE:46
   Assets_5: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -37,15 +37,15 @@ class Routes(
     UsersController_2: controllers.UsersController,
     // @LINE:16
     HotelController_0: controllers.HotelController,
-    // @LINE:23
+    // @LINE:27
     ImagesController_6: controllers.ImagesController,
-    // @LINE:35
-    HomeController_3: controllers.HomeController,
-    // @LINE:37
-    CountController_1: controllers.CountController,
     // @LINE:39
+    HomeController_3: controllers.HomeController,
+    // @LINE:41
+    CountController_1: controllers.CountController,
+    // @LINE:43
     AsyncController_4: controllers.AsyncController,
-    // @LINE:42
+    // @LINE:46
     Assets_5: controllers.Assets
   ) = this(errorHandler, UsersController_2, HotelController_0, ImagesController_6, HomeController_3, CountController_1, AsyncController_4, Assets_5, "/")
 
@@ -64,7 +64,7 @@ class Routes(
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/signin""", """controllers.UsersController.signInUser()"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/signout""", """controllers.UsersController.signOutUser()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.createHotel()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.searchHotels(location:String ?= null, price:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels""", """controllers.HotelController.searchHotels(location:String ?= null, minP:Integer ?= null, maxP:Integer ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hotels/username""", """controllers.HotelController.getHotelByUsername()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images""", """controllers.ImagesController.uploadImage()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """id<[^/]+>""", """controllers.ImagesController.downloadImage(id:String)"""),
@@ -173,17 +173,17 @@ class Routes(
     )
   )
 
-  // @LINE:17
+  // @LINE:18
   private[this] lazy val controllers_HotelController_searchHotels5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels")))
   )
   private[this] lazy val controllers_HotelController_searchHotels5_invoker = createInvoker(
-    HotelController_0.searchHotels(fakeValue[String], fakeValue[Integer]),
+    HotelController_0.searchHotels(fakeValue[String], fakeValue[Integer], fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HotelController",
       "searchHotels",
-      Seq(classOf[String], classOf[Integer]),
+      Seq(classOf[String], classOf[Integer], classOf[Integer]),
       "GET",
       this.prefix + """hotels""",
       """""",
@@ -191,7 +191,7 @@ class Routes(
     )
   )
 
-  // @LINE:18
+  // @LINE:20
   private[this] lazy val controllers_HotelController_getHotelByUsername6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels/username")))
   )
@@ -205,11 +205,11 @@ class Routes(
       "GET",
       this.prefix + """hotels/username""",
       """""",
-      Seq()
+      Seq("""nocsrf""")
     )
   )
 
-  // @LINE:23
+  // @LINE:27
   private[this] lazy val controllers_ImagesController_uploadImage7_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images")))
   )
@@ -227,7 +227,7 @@ class Routes(
     )
   )
 
-  // @LINE:24
+  // @LINE:28
   private[this] lazy val controllers_ImagesController_downloadImage8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -245,7 +245,7 @@ class Routes(
     )
   )
 
-  // @LINE:25
+  // @LINE:29
   private[this] lazy val controllers_ImagesController_deleteImage9_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -263,7 +263,7 @@ class Routes(
     )
   )
 
-  // @LINE:27
+  // @LINE:31
   private[this] lazy val controllers_HotelController_getHotelById10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -281,7 +281,7 @@ class Routes(
     )
   )
 
-  // @LINE:28
+  // @LINE:32
   private[this] lazy val controllers_HotelController_updateHotelById11_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -299,7 +299,7 @@ class Routes(
     )
   )
 
-  // @LINE:29
+  // @LINE:33
   private[this] lazy val controllers_HotelController_deleteHotelById12_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hotels/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -317,7 +317,7 @@ class Routes(
     )
   )
 
-  // @LINE:35
+  // @LINE:39
   private[this] lazy val controllers_HomeController_index13_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix)))
   )
@@ -335,7 +335,7 @@ class Routes(
     )
   )
 
-  // @LINE:37
+  // @LINE:41
   private[this] lazy val controllers_CountController_count14_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("count")))
   )
@@ -353,7 +353,7 @@ class Routes(
     )
   )
 
-  // @LINE:39
+  // @LINE:43
   private[this] lazy val controllers_AsyncController_message15_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("message")))
   )
@@ -371,7 +371,7 @@ class Routes(
     )
   )
 
-  // @LINE:42
+  // @LINE:46
   private[this] lazy val controllers_Assets_versioned16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -422,73 +422,73 @@ class Routes(
         controllers_HotelController_createHotel4_invoker.call(HotelController_0.createHotel())
       }
   
-    // @LINE:17
+    // @LINE:18
     case controllers_HotelController_searchHotels5_route(params@_) =>
-      call(params.fromQuery[String]("location", Some(null)), params.fromQuery[Integer]("price", Some(null))) { (location, price) =>
-        controllers_HotelController_searchHotels5_invoker.call(HotelController_0.searchHotels(location, price))
+      call(params.fromQuery[String]("location", Some(null)), params.fromQuery[Integer]("minP", Some(null)), params.fromQuery[Integer]("maxP", Some(null))) { (location, minP, maxP) =>
+        controllers_HotelController_searchHotels5_invoker.call(HotelController_0.searchHotels(location, minP, maxP))
       }
   
-    // @LINE:18
+    // @LINE:20
     case controllers_HotelController_getHotelByUsername6_route(params@_) =>
       call { 
         controllers_HotelController_getHotelByUsername6_invoker.call(HotelController_0.getHotelByUsername())
       }
   
-    // @LINE:23
+    // @LINE:27
     case controllers_ImagesController_uploadImage7_route(params@_) =>
       call { 
         controllers_ImagesController_uploadImage7_invoker.call(ImagesController_6.uploadImage())
       }
   
-    // @LINE:24
+    // @LINE:28
     case controllers_ImagesController_downloadImage8_route(params@_) =>
       call(params.fromPath[String]("id", None)) { (id) =>
         controllers_ImagesController_downloadImage8_invoker.call(ImagesController_6.downloadImage(id))
       }
   
-    // @LINE:25
+    // @LINE:29
     case controllers_ImagesController_deleteImage9_route(params@_) =>
       call(params.fromPath[String]("id", None)) { (id) =>
         controllers_ImagesController_deleteImage9_invoker.call(ImagesController_6.deleteImage(id))
       }
   
-    // @LINE:27
+    // @LINE:31
     case controllers_HotelController_getHotelById10_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
         controllers_HotelController_getHotelById10_invoker.call(HotelController_0.getHotelById(id))
       }
   
-    // @LINE:28
+    // @LINE:32
     case controllers_HotelController_updateHotelById11_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
         controllers_HotelController_updateHotelById11_invoker.call(HotelController_0.updateHotelById(id))
       }
   
-    // @LINE:29
+    // @LINE:33
     case controllers_HotelController_deleteHotelById12_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
         controllers_HotelController_deleteHotelById12_invoker.call(HotelController_0.deleteHotelById(id))
       }
   
-    // @LINE:35
+    // @LINE:39
     case controllers_HomeController_index13_route(params@_) =>
       call { 
         controllers_HomeController_index13_invoker.call(HomeController_3.index)
       }
   
-    // @LINE:37
+    // @LINE:41
     case controllers_CountController_count14_route(params@_) =>
       call { 
         controllers_CountController_count14_invoker.call(CountController_1.count)
       }
   
-    // @LINE:39
+    // @LINE:43
     case controllers_AsyncController_message15_route(params@_) =>
       call { 
         controllers_AsyncController_message15_invoker.call(AsyncController_4.message)
       }
   
-    // @LINE:42
+    // @LINE:46
     case controllers_Assets_versioned16_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned16_invoker.call(Assets_5.versioned(path, file))

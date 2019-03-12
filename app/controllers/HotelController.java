@@ -12,7 +12,9 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import javax.persistence.TypedQuery;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public class HotelController extends Controller {
@@ -38,9 +40,15 @@ public class HotelController extends Controller {
 
         hotel.setUser(user);
 
+//        final Optional<Hotel> existingHotel= hotelDao.findHotel(hotel.getName(),hotel.getLocation());
+//        if(existingHotel.isPresent()){
+//            return badRequest("Hotel exists already");
+//        }
+
         final Hotel newHotel = hotelDao.create(hotel);
 
         final JsonNode result = Json.toJson(newHotel);
+
         return ok(result);
 
 //        final JsonNode json = request().body().asJson();
@@ -53,10 +61,10 @@ public class HotelController extends Controller {
 
 
     @Transactional
-    public Result getHotelByUsername(){
+    public Result getHotelByUsername() {
 
         final JsonNode json = request().body().asJson();
-        final Hotel hotel = Json.fromJson(json,Hotel.class);
+        final Hotel hotel = Json.fromJson(json, Hotel.class);
         final String username = json.get("username").asText();
         Collection<Hotel> hotels = hotelDao.searchByUsername(username);
         final JsonNode result = Json.toJson(hotels);
@@ -65,7 +73,7 @@ public class HotelController extends Controller {
     }
 
 
-    @Transactional
+        @Transactional
     public Result getHotelById(Integer id) {
 
         if (null == id) {
@@ -126,9 +134,9 @@ public class HotelController extends Controller {
 
 
     @Transactional
-    public Result searchHotels(String location, Integer price){
+    public Result searchHotels(String location, Integer minP, Integer maxP){
 
-        Collection<Hotel> hotels = hotelDao.search(location, price);
+        Collection<Hotel> hotels = hotelDao.search(location, minP, maxP);
         final JsonNode result = Json.toJson(hotels);
         return ok(result);
     }

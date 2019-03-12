@@ -52,6 +52,10 @@ public class User {
     private String email;
 
     @Basic
+    @JsonProperty("mobileno")
+    private String mobileno;
+
+    @Basic
     @JsonProperty("role")
     private Role role;
 
@@ -71,13 +75,14 @@ public class User {
 
     }
 
-    public User(String username, String passwordHash, String salt, Integer hashIterations, String email, Role role, State state, String accessToken, Set<Hotel> hotels) {
+    public User(String username, String passwordHash, String salt, Integer hashIterations, String email, String mobileno , Role role, State state, String accessToken, Set<Hotel> hotels) {
         //this.id = id;
         this.username = username;
         this.passwordHash = passwordHash;
         this.salt = salt;
         this.hashIterations = hashIterations;
         this.email = email;
+        this.mobileno = mobileno;
         this.role = role;
         this.state = state;
         this.accessToken = accessToken;
@@ -155,7 +160,13 @@ public class User {
         this.accessToken = accessToken;
     }
 
+    public String getMobileno() {
+        return mobileno;
+    }
 
+    public void setMobileno(String mobileno) {
+        this.mobileno = mobileno;
+    }
 }
 
 

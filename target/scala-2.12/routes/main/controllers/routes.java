@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/etrupthi/Documents/casettaBE/conf/routes
-// @DATE:Sat Mar 09 12:03:13 IST 2019
+// @DATE:Tue Mar 12 13:07:37 IST 2019
 
 package controllers;
 
