@@ -40,7 +40,7 @@ public class Hotel {
     @JsonProperty("amenities")
     private String amenities;
 
-    @Basic
+    @Transient
     @JsonProperty("imageUrls")
     private String[] imageUrls;
 

@@ -4,10 +4,7 @@ import java.time.Clock;
 //import dao.BookDao;
 //import dao.BookDaoImpl;
 //import dao.FakeBookDao;
-import dao.HotelDao;
-import dao.HotelDaoImpl;
-import dao.UserDao;
-import dao.UserDaoImpl;
+import dao.*;
 import services.*;
 
 /**
@@ -28,6 +25,7 @@ public class Module extends AbstractModule {
         bind(HotelDao.class).to(HotelDaoImpl.class);
         bind(UserDao.class).to(UserDaoImpl.class);
         bind(ImageStore.class).to(ImageStoreImpl.class);
+        bind(ImageDao.class).to(ImageDaoImpl.class);
         // Use the system clock as the default implementation of Clock
         bind(Clock.class).toInstance(Clock.systemDefaultZone());
         // Ask Guice to create an instance of ApplicationTimer when the

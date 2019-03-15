@@ -16,6 +16,7 @@ PUT /users/signout        controllers.UsersController.signOutUser()
 POST /hotels                 controllers.HotelController.createHotel()
 
 GET /hotels                   controllers.HotelController.searchHotels(location: String ?= null, maxP: Integer ?= null)
+
 +nocsrf
 POST /hotels/username         controllers.HotelController.getHotelByUsername()
 

@@ -1,9 +1,9 @@
-2019-03-12 14:50:35,772 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-7 - Database [default] initialized at jdbc:mysql://localhost/library
-2019-03-12 14:50:35,781 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
-2019-03-12 14:50:35,801 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-7 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-12 14:50:36,181 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
-2019-03-12 14:50:36,442 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Starting application at 2019-03-12T09:20:36.441Z
-2019-03-12 14:50:38,738 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-7 - Using the following cache configuration for assets:
+2019-03-15 12:58:02,350 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-7 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-15 12:58:02,357 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2019-03-15 12:58:02,392 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-7 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-15 12:58:02,722 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
+2019-03-15 12:58:03,055 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Starting application at 2019-03-15T07:28:03.055Z
+2019-03-15 12:58:05,248 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-7 - Using the following cache configuration for assets:
 	 enableCaching = false
 	 enableCacheControl = false
 	 defaultCacheControl = public, max-age=3600
@@ -11,20 +11,106 @@
 	 configuredCacheControl:
 
 
-2019-03-12 14:50:38,784 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-15 12:58:05,283 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-    play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     play.filters.cors.CORSFilter
 
-2019-03-12 14:50:38,929 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
-2019-03-12 14:50:47,582 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-5 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4381264891359049806/multipartBody6639048585039087720asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/9ea802da-d9c4-4b26-9757-3517810159b9.png
-2019-03-12 14:53:39,897 [DEBUG] from services.ImageStoreImpl in application-akka.actor.default-dispatcher-41 - Source: /var/folders/g8/9gxzkrb90_z9c6x2p2ytkgt80000gq/T/playtemp4381264891359049806/multipartBody6762978902676391032asTemporaryFile Destination: /Users/etrupthi/Documents/play2/images/3a9f1d16-d87f-4206-b4a1-9ec364472430.png
-2019-03-12 14:54:19,107 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - Password hash bbfd6f7cbbda3a13aaeb3fdeda3650d7
-2019-03-12 14:54:24,252 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - Password hash bbfd6f7cbbda3a13aaeb3fdeda3650d7
-2019-03-12 14:56:31,914 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-23 - Auth token = Bearer CV9H1SZZYXSAQQ40B5
-2019-03-12 14:56:31,914 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-23 - accessToken CV9H1SZZYXSAQQ40B5
-2019-03-12 14:56:31,934 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-23 - CV9H1SZZYXSAQQ40B5
-2019-03-12 14:57:12,625 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-23 - null
-2019-03-12 14:57:12,625 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-23 - null
+2019-03-15 12:58:05,446 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
+2019-03-15 12:58:06,040 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-2 - Password hash 97113afbeffad5a526cacc3d92e7a961
+2019-03-15 12:58:16,368 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-6 - Password hash 97113afbeffad5a526cacc3d92e7a961
+2019-03-15 12:58:32,750 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-4 - Auth token = Bearer AXM5AZVWJOF00GUGMJ
+2019-03-15 12:58:32,750 [DEBUG] from controllers.Security.AuthenticatorAction in application-akka.actor.default-dispatcher-4 - accessToken AXM5AZVWJOF00GUGMJ
+2019-03-15 12:58:32,765 [DEBUG] from controllers.UsersController in application-akka.actor.default-dispatcher-4 - AXM5AZVWJOF00GUGMJ
+2019-03-15 12:58:49,358 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - manisha
+2019-03-15 12:58:49,387 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-3 - 1
+2019-03-15 12:58:49,432 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+
+! @7b82112mo - Internal server error, for (POST) [/hotels/username] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Type specified for TypedQuery [models.Image] is incompatible with query return type [class java.lang.String]]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:251)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:178)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:382)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:380)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:413)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Type specified for TypedQuery [models.Image] is incompatible with query return type [class java.lang.String]
+	at org.hibernate.internal.AbstractSharedSessionContract.resultClassChecking(AbstractSharedSessionContract.java:776)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:730)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at dao.ImageDaoImpl.getImageById(ImageDaoImpl.java:34)
+	at controllers.HotelController.getHotelByUsername(HotelController.java:75)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$14(Routes.scala:434)
+	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
+	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
+	at play.db.jpa.TransactionalAction.lambda$call$0(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$2(DefaultJPAApi.java:207)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:142)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:206)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:654)
+	at scala.util.Success.$anonfun$map$1(Try.scala:251)
+	at scala.util.Success.map(Try.scala:209)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:288)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
+	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
+	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
+	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
+	at scala.concurrent.Future.map(Future.scala:288)
+	at scala.concurrent.Future.map$(Future.scala:288)
+	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
+	at scala.concurrent.Future$.apply(Future.scala:654)
+	at play.core.j.JavaAction.apply(JavaAction.scala:138)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:303)
+	... 13 common frames omitted
+2019-03-15 13:10:11,802 [INFO] from application in application-akka.actor.default-dispatcher-8 - ApplicationTimer demo: Stopping application at 2019-03-15T07:40:11.802Z after 728s.
+2019-03-15 13:10:11,803 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2019-03-15 13:10:12,076 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-2 - Database [default] initialized at jdbc:mysql://localhost/library
+2019-03-15 13:10:12,076 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2019-03-15 13:10:12,077 [WARN] from com.zaxxer.hikari.util.DriverDataSource in play-dev-mode-akka.actor.default-dispatcher-2 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-03-15 13:10:12,100 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2019-03-15 13:10:12,101 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2019-03-15T07:40:12.101Z
+2019-03-15 13:10:13,043 [DEBUG] from controllers.AssetsConfiguration in play-dev-mode-akka.actor.default-dispatcher-2 - Using the following cache configuration for assets:
+	 enableCaching = false
+	 enableCacheControl = false
+	 defaultCacheControl = public, max-age=3600
+	 aggressiveCacheControl = public, max-age=31536000, immutable
+	 configuredCacheControl:
+
+
+2019-03-15 13:10:13,047 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.cors.CORSFilter
+
+2019-03-15 13:10:13,054 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2019-03-15 13:10:13,081 [DEBUG] from controllers.HotelController in application-akka.actor.default-dispatcher-2 - manisha

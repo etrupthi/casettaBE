@@ -2,8 +2,11 @@
 package services;
 
 import controllers.ImagesController;
+import models.Image;
 import play.Logger;
+import play.db.jpa.JPAApi;
 
+import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +17,8 @@ import java.util.UUID;
 public class ImageStoreImpl implements ImageStore {
 
     private final static Logger.ALogger LOGGER = Logger.of(ImageStoreImpl.class);
-    private static final Path STORAGE_ROOT = Paths.get("/Users/etrupthi/Documents/play2/images");
+    private static final Path STORAGE_ROOT = Paths.get("/Users/yaswanthi/Documents/play2/images");
+
 
     public ImageStoreImpl() {
 
@@ -49,6 +53,9 @@ public class ImageStoreImpl implements ImageStore {
 
     }
 
+
+
+
     private String generateImageId() {
         final UUID uuid = UUID.randomUUID();
         return uuid.toString();
@@ -82,8 +89,8 @@ public class ImageStoreImpl implements ImageStore {
             e.printStackTrace();
             return false;
         }
-
-
     }
+
+
 
 }

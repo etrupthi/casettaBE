@@ -1,6 +1,7 @@
 package controllers;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.inject.Inject;
+import dao.ImageDao;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -17,10 +18,13 @@ public class ImagesController extends Controller {
 
     private ImageStore imageStore;
 
+
     @Inject
     public ImagesController(ImageStore imageStore) {
 
         this.imageStore = imageStore;
+
+
     }
 
     public Result uploadImage() {
@@ -52,7 +56,6 @@ public class ImagesController extends Controller {
         return ok(result);
     }
 
-
     public Result downloadImage(String id) {
 
         final File file = imageStore.getImageById(id);
@@ -72,5 +75,6 @@ public class ImagesController extends Controller {
 
         return ok();
     }
+
 
 }
