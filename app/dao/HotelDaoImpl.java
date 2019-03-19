@@ -129,6 +129,40 @@ public class HotelDaoImpl implements HotelDao {
             return null;
         }
 
+        if(null!=hotel.getName()) {
+
+            existingHotel.setName(hotel.getName());
+        }
+        if(null!=hotel.getLocation()) {
+
+            existingHotel.setLocation(hotel.getLocation());
+        }
+        if(null!=hotel.getPrice()) {
+
+            existingHotel.setPrice(hotel.getPrice());
+        }
+        if(null!=hotel.getRating()) {
+
+            existingHotel.setRating(hotel.getRating());
+        }
+        if(null!=hotel.getUrl()) {
+
+            existingHotel.setUrl(hotel.getUrl());
+        }
+        if(null!=hotel.getDescription()) {
+
+            existingHotel.setDescription(hotel.getDescription());
+        }
+        if(null!=hotel.getImageUrls()) {
+
+            existingHotel.setImageUrls(hotel.getImageUrls());
+        }
+        if(null!=hotel.getAmenities()) {
+
+            existingHotel.setAmenities(hotel.getAmenities());
+        }
+
+
         existingHotel.setName(hotel.getName());
 
         jpaApi.em().persist(existingHotel);
